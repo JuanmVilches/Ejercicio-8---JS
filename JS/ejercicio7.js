@@ -1,20 +1,8 @@
 // Pide al usuario una frase y cuenta cuántas palabras tiene.
-function frase () {
-   const palabra = prompt("Ingrese una frase")
-   return palabra
-}
-do{
-    frase()
 
-}
-while(!frase)
+const frase = prompt("Ingrese una frase")
 
+const fraseArray = frase.trim().split(/\s+/)
 
-
-
-
-
-// console.log(frase)
-console.log(Boolean(frase))
-// console.log(arrayDeFrase)
-// console.log(arrayDeFrase.length)
+console.log(fraseArray)
+alert(`La frase "${frase}" tiene ${fraseArray.length} palabras`)
