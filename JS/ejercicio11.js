@@ -1,14 +1,47 @@
 // Crea un programa que solicite la fecha de nacimiento del usuario (en formato YYYY-MM-DD) y calcule su edad en días.
 
-const fechaNacimiento = prompt("Ingrese su fecha de nacimiento en formato YYYY-MM-DD")
+let fechaNacimiento;
+let hoy = new Date();
 
-const hoy = new Date(fechaNacimiento)
-const actual = new Date()
-const resta = actual - hoy
-console.log (resta)
-console.log (hoy)
-console.log(hoy.getFullYear())
-console.log(hoy.getMonth())
+do {
+    fechaNacimiento = prompt("Ingrese su fecha de nacimiento en formato YYYY-MM-DD:");
+} while (
+    fechaNacimiento === null ||
+    fechaNacimiento.trim() === "" ||
+    isNaN(new Date(fechaNacimiento))
+);
+
+let nacimiento = new Date(fechaNacimiento);
+
+let diferencia = hoy - nacimiento;
+
+let edadEnDias =Math.floor(diferencia / (1000 * 60 * 60 * 24));
+
+alert(`Tenés ${edadEnDias} días de edad.`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const numero = Number(hoy)
 // console.log (numero)
 

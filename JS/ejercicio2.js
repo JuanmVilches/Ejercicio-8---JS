@@ -1,6 +1,4 @@
-// Dado un array de palabras, crea un programa que devuelva un nuevo array con palabras 
-// que tengan más de 5 letras. Por ejemplo: ["casa", "programación", "sol", "javascript", “texto”, 
-// “html”, “bootstrap”, “css”, “nodejs”, “reactjs”, “for”] ; 
+// Dado un array de palabras, crea un programa que devuelva un nuevo array con palabras que tengan más de 5 letras. Por ejemplo: ["casa", "programación", "sol", "javascript", “texto”, “html”, “bootstrap”, “css”, “nodejs”, “reactjs”, “for”] ; 
 
 const arrayPalabras = ["casa", "programación", "sol", "javascript","texto", "html", "bootstrap","css","nodejs", "reactjs","for"]
 
@@ -10,4 +8,6 @@ const filtro = arrayPalabras.filter((palabra) =>{
     }
 })
 
-console.log(filtro)
+filtro.forEach(palabra => {
+    document.write(palabra + "<br>")
+})
